@@ -6,6 +6,7 @@ npm init    // to create package.json
 node script // <-(is the name); (in terminal) command to run code
 
 npm i nodemon -D  // to install nodemon globaly
+npx nodemon index.js (/* or whatever name of the particular file is */)
 
 npm run server   // run nodemon
 
@@ -13,7 +14,7 @@ npm run server   // run nodemon
 
 114
 
-// node script.js 3 ADD 5 - is array based
+// node      script.js      3     ADD     5 - is array based
 // [0]-node [1]-script.js [2]-3 [3]-ADD [4]-5
 
 const a = parseInt(process.argv[2]); // - reads & gets from console
