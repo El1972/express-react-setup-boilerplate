@@ -130,29 +130,27 @@
 // Archakov
 
 const express = require('express');
+const mysql = require('mysql');
 const app = express();
 
 app.use(express.urlencoded({ extended: false }))
 
-app.get('/text', (req, res) => {
-    res.send(`
-    <form>
-        <input type="text" name='color'/>
-        <button>Submit</button>
-    </form>
-    `)
+const { createPool } = require('mysql');
+const pool = createPool({
+    host: "localhost",
+    port: 8889,
+    user: "root",
+    password: "root",
+    database: "register_login"
 })
 
-app.get('/things', (req, res) => {
+
+app.get('/home', (req, res) => {
     res.json({
         "talk": "opl"
     })
 })
 
-
-app.post('/create', (req, res) => {
-
-})
 
 app.listen(4444, () => {
     console.log('Listens on port 4444...');

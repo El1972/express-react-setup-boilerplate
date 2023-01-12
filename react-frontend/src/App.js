@@ -1,3 +1,6 @@
+
+// express-react setup (Don't delete it!!!)
+
 import React, { useEffect, useState } from 'react'
 
 function App() {
@@ -5,7 +8,7 @@ function App() {
   const [item, setItem] = useState('')
 
   useEffect(() => {
-    fetch('/things')
+    fetch('/home')
       .then(response => response.json())
       .then(data => setItem(data))
   })
@@ -18,3 +21,4 @@ function App() {
 }
 
 export default App;
+
